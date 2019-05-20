@@ -1,5 +1,3 @@
 class Notebook < ApplicationRecord
-  attr_acessor :marca, :valor
-
-  validates_presence_of :marca, :valor
+  validates :marca, :valor, presence: true
 end
