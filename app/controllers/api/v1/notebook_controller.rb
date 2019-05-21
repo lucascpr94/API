@@ -31,6 +31,12 @@ module Api
                   render json: {status: "SUCESSO", message:"Notebook deletado com sucesso",data:notebook},status: :ok
                 end
 
+                # Atualizar notebook
+                def update
+                  notebook = Notebook.find(params[:id])
+                  notebook.update(notebook_params)
+                  render json: {status: "SUCESSO", message:"Notebook atualizado com sucesso",data:notebook},status: :ok
+                end
 
                 # Parametros aceitos
                 private
