@@ -17,16 +17,28 @@ module Api
                   # Criar novo notebook
                 def create
                     notebook = Notebook.new(notebook_params)
-                    if notebook_params.save
+                    if notebook.save
                       render json: {status: "SUCESSO",message:"Notebook salvo com sucesso.",data:notebook},status: :ok
                     else
                       render json: {status: "ERRO", message:"Não conseguiu salvar",data:notebook.erros},status: :unprocessable_entity
+                    end
                 end
 
+                # Deletar notebook
+                def destroy
+                  notebook = Notebook.find(params[:id])
+                  notebook.destroy
+                  render json: {status: "SUCESSO", message:"Notebook deletado com sucesso",data:notebook},status: :ok
+                end
+
+
                 # Parametros aceitos
+                private
                 def notebook_params
                       params.permit(:marca,:valor)
                 end
         end
+
       end
+
 end
