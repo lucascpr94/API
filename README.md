@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  Fiz essa API com objetivo de aprimorar meus conhecimentos.
 
-Things you may want to cover:
+  GEM:
+  faker - para popular o banco de dados;
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  Usada e testada com POSTMAM.
+  
